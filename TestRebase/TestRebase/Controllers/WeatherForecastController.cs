@@ -36,6 +36,14 @@ namespace TestRebase.Controllers
             var newWeatherForecast1 = _service.Create(name);
 
             return Ok();
-        } 
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete([FromQuery] int id)
+        {
+            var result = _service.Delete(id);
+
+            return Ok(result);
+        }
     }
 }
