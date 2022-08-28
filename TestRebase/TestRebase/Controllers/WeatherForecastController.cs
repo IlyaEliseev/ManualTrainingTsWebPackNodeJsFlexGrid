@@ -29,5 +29,13 @@ namespace TestRebase.Controllers
             })
             .ToArray();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Crete([FromBody] string name)
+        {
+            var newWeatherForecast = _service.Create(name);
+
+            return Ok();
+        } 
     }
 }
