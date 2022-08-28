@@ -4,7 +4,7 @@ namespace TestRebase.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class WeatherForecastController1 : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
@@ -31,9 +31,9 @@ namespace TestRebase.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Crete([FromBody] string name)
+        public async Task<IActionResult> Crete1([FromBody] string name)
         {
-            var newWeatherForecast = _service.Create(name);
+            var newWeatherForecast1 = _service.Create(name);
 
             return Ok();
         } 
